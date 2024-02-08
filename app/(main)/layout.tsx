@@ -3,7 +3,6 @@
 import { Spinner } from "@/components/spinner";
 import { Authenticated, useConvexAuth } from "convex/react";
 import { redirect } from "next/navigation";
-import { Logo } from "./_components/logo";
 import { Navigation} from "./_components/navigation";
 import { SearchCommand } from "@/components/search-command";
 
