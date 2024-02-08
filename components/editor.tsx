@@ -30,6 +30,7 @@ const Editor = ({
 
   const editor: BlockNoteEditor | null = useBlockNote({
     editable,
+    initialContent: initialContent ? JSON.parse(initialContent) : undefined,
     onEditorContentChange: (editor) => {
       onChange(JSON.stringify(editor.topLevelBlocks, null, 2));
     },
