@@ -5,20 +5,20 @@ import { cn } from "@/lib/utils";
 
 const font = Oswald ( {
     subsets: ["latin"],
-    weight: ["400","600"],
+    weight: ["400","500","600"],
 });
 
 export const Logo = () => {
     return (
-        <div className="hidden md:flex items-center gap-x-2">
+        <div className="flex items-center gap-x-2">
             <Image 
                 src="/logo.svg"
                 height="32"
                 width="32"
                 alt="Logo"
             />
-            <p className={cn("text-2xl font-semibold ", font.className)}>
-                INCONCISE
+            <p className={cn("tracking-normal text-2xl ", font.className)}>
+                Inconcise
             </p>
         </div>
     )

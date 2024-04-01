@@ -15,13 +15,15 @@ export const Navbar = () =>{
 
     const { isAuthenticated, isLoading} = useConvexAuth();
     const scrolled = useScrollTop();
+    const { user } = useUser();
+
 
     return(
         <div className={cn(
-            "z-50 bg-background dark:bg-[#2c2c2c] fixed top-0 flex items-center w-full px-4 py-2", scrolled && "border-b shadow-sm"
+            "z-50 bg-background dark:bg-[#2c2c2c] fixed top-0 flex items-center w-full px-4 py-2", scrolled && "border-b shadow-sm bg-background/90 dark:bg-[#2c2c2c]/90"
         )}>
             <Logo />
-            <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
+            <div className="md:ml-auto justify-end w-full flex items-center gap-x-2">
                 { isLoading && (
                     <Spinner />
                 )}
@@ -33,7 +35,10 @@ export const Navbar = () =>{
                             </Button>
                         </SignInButton>
                         <SignInButton mode="modal">
-                            <Button  className="bg-[#446CE4] hover:bg-[#304DA2] sm">
+                            <Button  className="
+                                bg-[#446CE4]
+                                hover:bg-[#2EB67D]
+                            ">
                                 Get a free account
                             </Button>
                         </SignInButton>
@@ -41,11 +46,15 @@ export const Navbar = () =>{
                 )}
                 {isAuthenticated && !isLoading && (
                     <>
-                        <Button className="bg-[#446CE4] hover:bg-[#304DA2] sm" asChild>
                             <Link href="/documents">
-                                Enter Inconcise
-                            </Link>
-                        </Button>
+                            <Button
+                                    className="
+                                    bg-[#446CE4]
+                                    hover:bg-[#2EB67D]
+                                    "
+                                >
+                                    Enter {user?.firstName}&apos;s Inconcise
+                                </Button>                            </Link>
                         <UserButton
                         afterSignOutUrl="/"
                         />

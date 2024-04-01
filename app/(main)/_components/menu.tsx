@@ -46,21 +46,21 @@ export const Menu = ({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button size="sm" variant="ghost">
-          <MoreHorizontal className="h-4 w-4" />
+          <MoreHorizontal className="h-4 w-4 dark:text-[#CFCFCF]" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent 
-        className="w-60" 
+        className="w-60 text-[#2C2C2C] dark:text-[#CFCFCF]" 
         align="end" 
         alignOffset={8} 
         forceMount
       >
         <DropdownMenuItem onClick={onArchive}>
-          <Trash className="h-4 w-4 mr-2" />
-          Delete
+          <Trash className="h-4 w-4 mr-2 text-[#2C2C2C] dark:text-[#CFCFCF]" />
+            Delete
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <div className="text-xs text-[#2C2C2C] p-2">
+        <div className="text-xs text-[#2C2C2C] dark:text-[#CFCFCF] p-2">
           Last edited by: {user?.fullName}
         </div>
       </DropdownMenuContent>
