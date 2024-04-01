@@ -62,9 +62,6 @@ const privacyPolicy = () => {
                     <h3 className="text-base"><b>6. International Transfers</b></h3>
                     <p className="ml-4">Explain if user information may be transferred to and processed in other countries.</p>
                     <br />
-                    <h3 className="text-base"><b>7. Children's Privacy</b></h3>
-                    <p className="ml-4">Explain if the service is directed to children under 13 and how you handle their information.</p>
-                    <br />
                     <h3 className="text-base"><b>8. Changes to this Privacy Policy</b></h3>
                     <p className="ml-4">Explain how you will notify users of changes to the privacy policy and how their continued use constitutes acceptance.</p>
                     <br />
