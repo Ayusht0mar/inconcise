@@ -128,12 +128,12 @@ export const Toolbar = ({
           onKeyDown={onKeyDown}
           value={value}
           onChange={(e) => onInput(e.target.value)}
-          className="text-5xl bg-transparent font-bold break-words outline-none text-[#3F3F3F] dark:text-[#CFCFCF] resize-none"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl bg-transparent font-bold break-words outline-none text-[#3F3F3F] dark:text-[#CFCFCF] resize-none"
         />
       ) : (
         <div
           onClick={enableInput}
-          className="pb-[11.5px] text-5xl font-bold break-words outline-none text-[#3F3F3F] dark:text-[#CFCFCF]"
+          className="pb-[11.5px] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold break-words outline-none text-[#3F3F3F] dark:text-[#CFCFCF]"
         >
           {initialData.title}
         </div>

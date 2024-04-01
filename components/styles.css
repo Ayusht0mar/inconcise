@@ -1,0 +1,3 @@
+.bn-container[data-color-scheme=dark] {
+    --bn-colors-editor-background: none;
+}

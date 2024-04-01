@@ -10,7 +10,7 @@ import { EdgeStoreProvider } from '@/lib/edgestore';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'In concise | The Ultimate Productivity App',
+  title: 'Inconcise | The Ultimate Productivity App',
   description: 'Providing Solutions to increase the productivity in an efficient and concise manner',
   icons : {
     icon: [

@@ -107,8 +107,8 @@ export const Item = ({
         paddingLeft: level ? `${(level * 12) + 12}px` : "12px"
       }}
       className={cn(
-        "group min-h-[27px] text-sm py-1 pr-3 w-full hover:bg-[#FFABB7] hover:text-[#2C2C2C] flex items-center text-[#2C2C2C] font-medium",
-        active && "bg-[#FF4962] text-[#FFFFFF]"
+        "group min-h-[27px] text-sm py-1 pr-3 w-full hover:bg-[#FFABB7] hover:text-[#2C2C2C] dark:hover:bg-[#AD001850] flex items-center text-[#2C2C2C] font-medium dark:text-[#CFCFCF]",
+        active && "bg-[#FF4962] text-[#FFFFFF] dark:bg-[#AD0018] hover:bg-[#FF4962] dark:hover:dark:bg-[#AD0018]"
       )}
     >
       {!!id && (
@@ -118,29 +118,29 @@ export const Item = ({
           onClick={handleExpand}
         >
           <ChevronIcon
-            className="h-4 w-4 shrink-0 text-[#2C2C2C]/50"
+            className="h-4 w-4 shrink-0 text-[#2C2C2C]/50 dark:text-[#CFCFCF]/50"
           />
         </div>   
       )}
       {documentIcon ? (
-        <div className="shrink-0 mr-2 text-[18px]">
+        <div className="shrink-0 mr-2 text-[18px] ">
           {documentIcon}
         </div>
       ) : (
         <Icon 
-          className="shrink-0 h-[18px] w-[18px] mr-2 text-[#2C2C2C]"
+          className="shrink-0 h-[18px] w-[18px] mr-2 text-[#2C2C2C] dark:text-[#CFCFCF]"
         />
       )}
       <span className="truncate">
         {label}
       </span>
       {isSearch && (
-        <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-[#2C2C2C] opacity-100">
+        <kbd className="ml-auto pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-[#2C2C2C] dark:text-[#CFCFCF] opacity-100">
           <span className="text-xs">CTRL</span>K
         </kbd>
       )}
       {!!id && (
-        <div className="ml-auto flex items-center gap-x-2">
+        <div className="ml-auto flex items-center gap-x-2 ">
           <DropdownMenu>
             <DropdownMenuTrigger
               onClick={(e) => e.stopPropagation()}
@@ -150,7 +150,7 @@ export const Item = ({
                 role="button"
                 className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600"
               >
-                <MoreHorizontal className="h-4 w-4 text-[#2C2C2C]" />
+                <MoreHorizontal className="h-4 w-4 text-[#2C2C2C] dark:text-[#CFCFCF] " />
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent
@@ -164,7 +164,7 @@ export const Item = ({
                 Delete
               </DropdownMenuItem>
               <DropdownMenuSeparator />
-              <div className="text-xs text-[#2C2C2C] p-2">
+              <div className="text-xs text-[#2C2C2C] p-2 dark:text-[#CFCFCF]">
                 Last edited by: {user?.fullName}
               </div>
             </DropdownMenuContent>
@@ -174,7 +174,7 @@ export const Item = ({
             onClick={onCreate}
             className="opacity-0 group-hover:opacity-100 h-full ml-auto rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600"
           >
-            <Plus className="h-4 w-4 text-[#2C2C2C]" />
+            <Plus className="h-4 w-4 text-[#2C2C2C] dark:text-[#CFCFCF]" />
           </div>
         </div>
       )}

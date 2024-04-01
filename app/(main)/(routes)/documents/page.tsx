@@ -37,7 +37,10 @@ const DocumentsPage = () => {
             <h2 className="text-lg font-medium">
                 Welcome to {user?.firstName}&apos;s Inconcise
             </h2>
-            <Button onClick={onCreate}>
+            <Button
+             onClick={onCreate}
+             className="dark:text-[#2C2C2C]"
+            >
                 <PlusCircle className="h-4 w-4 mr-2"/>
                 Create a note
             </Button>

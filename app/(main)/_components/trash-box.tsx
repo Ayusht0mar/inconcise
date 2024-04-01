@@ -61,25 +61,25 @@ export const TrashBox = () => {
 
   if (documents === undefined) {
     return (
-      <div className="h-full flex items-center justify-center p-4">
+      <div className="h-full flex items-center justify-center dark:bg-[#1F1F1F] p-4">
         <Spinner size="lg" />
       </div>
     );
   }
 
   return (
-    <div className="text-sm">
+    <div className="text-sm rounded dark:bg-[#1F1F1F] dark:border-[#2C2C2C] dark:border ">
       <div className="flex items-center gap-x-1 p-2">
         <Search className="h-4 w-4" />
         <Input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="h-7 px-2 focus-visible:ring-transparent bg-secondary"
+          className="h-7 px-2 focus-visible:ring-transparent bg-secondary dark:text-[#CFCFCF] dark:placeholder-[#CFCFCF]"
           placeholder="Filter by page title..."
         />
       </div>
       <div className="mt-2 px-1 pb-1">
-        <p className="hidden last:block text-xs text-center text-[#2C2C2C] pb-2">
+        <p className="hidden last:block text-xs text-center text-[#2C2C2C] dark:text-[#CFCFCF] pb-2">
           No documents found.
         </p>
         {filteredDocuments?.map((document) => (
@@ -98,14 +98,14 @@ export const TrashBox = () => {
                 role="button"
                 className="rounded-sm p-2 hover:bg-neutral-200 dark:hover:bg-neutral-600"
               >
-                <Undo className="h-4 w-4 text-[#2C2C2C]" />
+                <Undo className="h-4 w-4 text-[#2C2C2C] dark:text-[#CFCFCF]" />
               </div>
               <ConfirmModal onConfirm={() => onRemove(document._id)}>
                 <div 
                   role="button"
                   className="rounded-sm p-2 hover:bg-neutral-200 dark:hover:bg-neutral-600"
                 >
-                  <Trash className="h-4 w-4 text-[#2C2C2C]" />
+                  <Trash className="h-4 w-4 text-[#2C2C2C] dark:text-[#CFCFCF]" />
                 </div>
               </ConfirmModal>
             </div>

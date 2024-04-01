@@ -56,10 +56,11 @@ export const SearchCommand = () => {
     <CommandDialog open={isOpen} onOpenChange={onClose}>
       <CommandInput
         placeholder={`Search ${user?.fullName}'s Inconcise...`}
+        className="dark:placeholder-[#CFCFCF]"
       />
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Documents">
+        <CommandGroup heading={<span className="dark:text-[#CFCFCF]">Documents</span> }>
           {documents?.map((document) => (
             <CommandItem
               key={document._id}

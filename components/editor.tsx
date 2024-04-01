@@ -3,7 +3,10 @@ import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
 import { BlockNoteView, useBlockNote } from "@blocknote/react";
 import "@blocknote/react/style.css";
 
+import "./styles.css";
+
 import { useEdgeStore } from "@/lib/edgestore";
+import { useTheme } from "next-themes";
 
 
 interface EditorProps {
@@ -17,6 +20,8 @@ const Editor = ({
   initialContent,
   editable
 }: EditorProps) => {
+
+  const { resolvedTheme } = useTheme();
 
   const { edgestore } = useEdgeStore();
 
@@ -37,7 +42,10 @@ const Editor = ({
     uploadFile: handleUpload
   });
 
-  return <BlockNoteView editor={editor} />;
+  return <BlockNoteView 
+            editor={editor}
+            theme={resolvedTheme === "dark" ? "dark" : "light" }
+          />;
 }
 
 export default Editor;
