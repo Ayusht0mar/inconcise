@@ -146,7 +146,7 @@ export const Publish = ({
             <Button
               disabled={isSubmitting}
               onClick={onPublish}
-              className="w-full text-s dark:text-[#2C2C2C]"
+              className="w-full text-s text-[#FFF] dark:text-[#2C2C2C]"
               size="sm"
             >
               Publish

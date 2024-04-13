@@ -15,7 +15,7 @@ const Features = () => {
                             Create Documents
                         </dt>
                         <dd className="mt-2 text-base leading-7">
-                            Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.
+                            Effortlessly craft documents using customizable templates and formatting options to suit your needs.
                         </dd>
                     </li>
                     <li>
@@ -23,7 +23,7 @@ const Features = () => {
                             Structurize Documents
                         </dt>
                         <dd className="mt-2 text-base leading-7">
-                            Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.
+                            Organize your content effectively with intuitive tools like headings, bullet points, and indentation for better readability.
                         </dd>
                     </li>
                     <li>
@@ -31,7 +31,7 @@ const Features = () => {
                             Publish Online
                         </dt>
                         <dd className="mt-2 text-base leading-7">
-                            Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.
+                            Share your documents with the world by sharing link, also with real time update.
                         </dd>
                     </li>
                     <li>
@@ -39,7 +39,7 @@ const Features = () => {
                             Add Collaborators
                         </dt>
                         <dd className="mt-2 text-base leading-7">
-                            Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.
+                            Faster teamwork by inviting others to collaborate in real-time, allowing simultaneous editing.
                         </dd>
                     </li>
                 </ul>
